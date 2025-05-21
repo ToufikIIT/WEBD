@@ -1,199 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Spotify - Web Player: Music for everyone</title>
 </head>
+
 <body>
-    <header>
-        <div class="navbar">
-            <div class="nav-logo border">
-                <div class="logo"> </div>
+    <div class="container flex bg-black">
+        <div class="left ">
+            <div class="close">
+                <img class="invert" src="close.svg" alt="">
             </div>
-            
-            <div class="nav-address border">
-                <p class="add-first">Delivery to</p>
-                <div class="add-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class="add-second">India</p>
+            <div class="home bg-grey rounded  p-1">
+                <div class="logo"><img width="120px" class="invert" src="logo.svg" alt=""></div>
+                <ul>
+                    <li><img class="invert" src="home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="search.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+
+            <div class="library bg-grey rounded p-1">
+                <div class="heading">
+                    <img class="invert" src="playlist.svg" alt="">
+                    <h4>
+                        Your Library
+                    </h4>
+                </div>
+                <div class="songlist">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
                 </div>
             </div>
-
-            <div class="nav-search ">
-                <select class="search-select">
-                    <option>All</option>
-                </select>
-                <input placeholder="Search Amazon" class="search-input">
-                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-            </div>
-
-            <div class="nav-lang border">
-                <p class="lang">
-                    <i class="fa-solid fa-flag-usa"></i>
-                    EN
-                </p>
-            </div>
-
-            <div class="nav-signin border">
-                <p><span>Hello, sign in</span></p>
-                <p class="nav-second">Account & Lists</p>
-            </div>
-
-            <div class="nav-return border">
-                <p><span>Returns</span></p>
-                <p class="nav-second">& Orders</p>
-            </div>
-
-            <div class="nav-cart border">
-                <i class="fa-solid fa-cart-shopping"></i>
-                Cart
-            </div>
         </div>
 
-        <div class="panel">
-            <div class="panel-all">
-                <i class="fa-solid fa-bars"></i>
-                All
+        <div class="right bg-grey rounded">
+            <div class="header rounded">
+                <div class="nav">
+                    <img class="invert hamburger" src="hamburger.svg" alt="">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                            stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="buttons">
+                    <button class="signupbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
             </div>
-            <div class="panel-ops">
-                <p>Today's Deals</p>
-                <p>Registry</p>
-                <p>Customer Service</p>
-                <p>Gift Cards</p>
-                <p>Sell</p>
+            <div class="spotifyPlaylist">
+                <h2>Spotify Playlist</h2>
+                <div class="cardContainer">
+                    <div data-folder="first" class="card">
+                        <div class="play">
+                            <svg width="20" height="20" viewbox="0 0 24 24" fill="none"
+                                xmlns="https://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <img src="songs/first/cover.jpeg" alt="">
+                        <h3>Playlist 1</h3>
+                        <p>Chori kiya Re Jiya</p>
+                    </div>
+                    <div data-folder="second" class="card">
+                        <div class="play">
+                            <svg width="20" height="20" viewbox="0 0 24 24" fill="none"
+                                xmlns="https://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <img src="songs/second/cover.jpeg" alt="">
+                        <h3>Playlist 2</h3>
+                        <p>Tum se</p>
+                    </div>
+                    <div data-folder="third" class="card">
+                        <div class="play">
+                            <svg width="20" height="20" viewbox="0 0 24 24" fill="none"
+                                xmlns="https://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <img src="songs/third/cover.jpeg" alt="">
+                        <h3>Playlist 3</h3>
+                        <p>Bahara</p>
+                    </div>
+                    <div data-folder="fourth" class="card">
+                        <div class="play">
+                            <svg width="20" height="20" viewbox="0 0 24 24" fill="none"
+                                xmlns="https://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <img src="songs/fourth/cover.jpeg" alt="">
+                        <h3>Playlist 4</h3>
+                        <p>Tere Mast Mast Do Nein</p>
+                    </div>
+                    <div data-folder="fifth" class="card">
+                        <div class="play">
+                            <svg width="20" height="20" viewbox="0 0 24 24" fill="none"
+                                xmlns="https://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <img src="songs/fifth/cover.jpeg" alt="">
+                        <h3>Playlist 5</h3>
+                        <p>Teri Ore</p>
+                    </div>
+                    <div data-folder="sixth" class="card">
+                        <div class="play">
+                            <svg width="20" height="20" viewbox="0 0 24 24" fill="none"
+                                xmlns="https://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <img src="songs/sixth/cover.jpeg" alt="">
+                        <h3>Playlist 6</h3>
+                        <p>Youtube Studios</p>
+                    </div>
+                    <div data-folder="seventh" class="card">
+                        <div class="play">
+                            <svg width="20" height="20" viewbox="0 0 24 24" fill="none"
+                                xmlns="https://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <img src="songs/seventh/cover.jpeg" alt="">
+                        <h3>Playlist 7</h3>
+                        <p>Aashiq tera</p>
+                    </div>
+                    <div data-folder="eighth" class="card">
+                        <div class="play">
+                            <svg width="20" height="20" viewbox="0 0 24 24" fill="none"
+                                xmlns="https://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <img src="songs/eighth/cover.jpeg" alt="">
+                        <h3>Playlist 8</h3>
+                        <p>Darmiyaan</p>
+                    </div>
+                </div>
             </div>
-            <div class="panel-deals">
-                Shop deals in Electronics
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="circle">
+
+                    </div>
+                </div>
+                <div class="abovebar">
+                    <div class="songinfo">
+                    </div>
+                    <div class="songbuttons">
+                        <img id="previous" src="prev.svg" alt="">
+                        <img id="play" src="pause.svg" alt="">
+                        <img id="next" src="next.svg" alt="">
+                    </div>
+                    <div class="vol_time">
+                        <div class="songtime"></div>
+                        <div class="volume">
+                            <img width="25px" src="volume.svg" alt="">
+                            <div class="range">
+                                <input type="range" name="volume">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
-    <div class="hero-section">
-        <div class="hero-msg">
-            <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a>Click here to go to amazon.in</a></p>
         </div>
     </div>
-
-    <div class="shop-section">
-        <div class="box1 box">
-            <div class="box-content">
-                <h2>Clothes</h2>
-                <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
-                <p>See More</p>
-            </div>
-        </div>
-        <div class="box2 box">
-            <div class="box-content">
-                <h2>Health & Personal Care</h2>
-                <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
-                <p>See More</p>
-            </div>
-        </div>
-        <div class="box3 box">
-            <div class="box-content">
-                <h2>Furniture</h2>
-                <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
-                <p>See More</p>
-            </div>
-        </div>
-        <div class="box4 box">
-            <div class="box-content">
-                <h2>Mobiles & Tablets</h2>
-                <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
-                <p>See More</p>
-            </div>
-        </div>
-        <div class="box1 box">
-            <div class="box-content">
-                <h2>Beauty Products</h2>
-                <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
-                <p>See More</p>
-            </div>
-        </div>
-        <div class="box2 box">
-            <div class="box-content">
-                <h2>Pet products</h2>
-                <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
-                <p>See More</p>
-            </div>
-        </div>
-        <div class="box3 box">
-            <div class="box-content">
-                <h2>Travels</h2>
-                <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
-                <p>See More</p>
-            </div>
-        </div>
-        <div class="box4 box">
-            <div class="box-content">
-                <h2>Fashion</h2>
-                <div class="box-img" style="background-image: url('box8_image.jpg');"></div>
-                <p>See More</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="foot-panel1">
-            Back To Top
-        </div>
-
-        <div class="foot-panel2">
-            <ul class>
-                <p>Get to Know Us</p>
-                <a>Careers </a>
-                <a>Blog</a>
-                <a>About Amazon</a>
-                <a>Investor Relations</a>
-                <a>Amazon Devices</a>
-                <a>Amazon Science</a>
-            </ul>
-            <ul>
-                <p>Make Money with Us</p>
-                <a>Careers </a>
-                <a>Blog</a>
-                <a>About Amazon</a>
-                <a>Investor Relations</a>
-                <a>Amazon Devices</a>
-                <a>Amazon Science</a>
-                <a>Host an Amazon Hub</a>
-                <a>> See More Make Money</a>
-                
-            </ul>
-            <ul>
-                <p>Amazon Payment Products</p>
-                <a>Careers </a>
-                <a>Blog</a>
-                <a>About Amazon</a>
-                <a>Investor Relations</a>
-            </ul>
-            <ul>
-                <p>Let Us Help You</p>
-                <a>Careers </a>
-                <a>Blog</a>
-                <a>About Amazon</a>
-                <a>Investor Relations</a>
-                <a>Amazon Devices</a>
-                <a>Amazon Science</a>
-                <a>Help</a>
-            </ul>
-        </div>
-
-        <div class="foot-panel3">
-            <div class="logo"></div>
-        </div>
-
-        <div class="foot-panel4">
-            <div class="pages">
-                <a>Condition of Use</a>
-                <a>Privacy Notice</a>
-                <a>Your Ads Privacy Choices</a>
-            </div>
-
-            <div class="copyright"></div>
-        </div>
-    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

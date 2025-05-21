@@ -1,256 +1,389 @@
-*{
-    margin:0;
-    font-family: Arial;
-    border: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --a: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
-.navbar{
-    height: 60px;
-    background-color: #0F1111;
+body {
+    background-color: black;
     color: white;
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.right {
+   width: 75vw;
+   margin: 12px 0px;
+   position: relative;
+}
+
+.home ul li {
+    gap: 15px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: 700;
 }
 
-.nav-logo{
-    height: 50px;
-    width: 113px;
-}
-
-.logo{
-    background-image: url("amazon_logo.png");
-    height: 50px;
+.heading {
+    gap: 15px;
+    display: flex;
     width: 100%;
-    background-size: cover;
-}
-
-.border{
-    border: 1.5px solid transparent;
-}
-
-.border:hover{
-    border: 1.5px solid white;
-}
-
-/** box2 **/
-.add-first{
-    color: #cccccc;
-    font-size: 0.85rem;
-    margin-left: 15px;
-}
-
-.add-second {
-    font-size: 1rem;
-    margin-left: 3px;
-}
-
-.add-icon{
-    display: flex;
+    padding-top: 14px;
+    padding: 23px 14px;
     align-items: center;
 }
 
-/** box3 **/
-
-.nav-search{
-    display:flex;
-    justify-content: space-evenly;
-    background-color: pink;
-    width: 620px;
-    height: 40px;
-    border-radius: 4px;
+.heading img {
+    width: 23px;
 }
 
-.search-select{
-    background-color: #f3f3f3;
-    width: 50px;
-    text-align: center;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border: none;
+.footer {
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 0px;
+    flex-wrap: wrap;
 }
 
-.search-input{
+.footer a {
+    color: grey;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+    margin-top: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34 34 34);
+    align-items: center;
+}
+
+.header>* {
+    padding: 15px;
+}
+
+.spotifyPlaylist {
+    padding: 16px;
+}
+
+.card {
+    padding-top: 15px;
+    position: relative;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    background-color: #252525;
+    transition: all 0.7s;
+    gap: 10px;
+
+}
+
+.card:hover{
+    background-color: rgb(78, 77, 77);
+    cursor: pointer;
+    --a: 1;
+}
+
+.play {
+    width: 38px;
+    height: 38px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 58px;
+    right: 7px;
+    opacity: var(--a);
+    transition: all 1s ease-out;
+}
+
+.card img {
     width: 100%;
-    font-size: 1rem;
-    border: none;
+    object-fit: contain;
+    border-radius: 9px;
 }
 
-.search-icon{
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    background-color: rgb(243, 137, 9);
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-.nav-search:hover {
-    border: 2px solid orange;
-}
-
-.lang {
-    font-size: 1rem;
-    display:flex;
-    margin-top: 20px;
-    font-weight: 700;
-}
-
-/** box5 **/
-span{
-    font-size: 0.85rem;
-}
-
-.nav-second{
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-/** box7 **/
-.nav-cart i {
-    font-size: 30px;
-}
-
-.nav-cart{
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-/** panel **/
-.panel{
-    height: 40px;
-    display:flex;
-    background-color: #222f3d;
-    color: white;
-    align-items:center;
-    /* justify-content: space-evenly; */
-}
-
-.panel-ops p {
-    display:inline;
-    margin-left: 15px;
-}
-
-.panel-ops{
-    width: 70%;
-    font-size: 0.90rem;
-}
-
-.panel-deals{
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin-right: 20px;
-}
-
-.panel-all{
-    margin-left: 19px;
-}
-
-.hero-section{
-    background-image: url("hero_image.jpg");
-    background-size: cover;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.hero-msg {
-    background-color: white;
-    color: black;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    width: 80%;
-    margin-bottom: 25px;
-}
-
-.hero-msg a {
-    color: #007185;
-}
-.shop-section{
+.cardContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: #e2e7e6;
+    margin-top: 30px;
+    gap: 40px;
+    overflow-y: auto;
+    max-height: 60vh;
 }
 
-.box {
-  /* border: 2px solid black; */
-  height: 300px;
-  width: 24%;
-  background-color: white;
-  padding: 20px 0px 15px;
-  margin-top: 15px;
+.signupbtn {
+    background-color: rgb(34 34 34);
+    color: rgb(153, 149, 149);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
-.box-img{
-    height: 240px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 1rem;
-    margin-bottom: 0.85rem;
+.signupbtn:hover {
+    font-size: 0.88rem;
+    color: rgb(208, 203, 203);
 }
 
-.box-content{
-    margin-left: 1rem;
-    margin-right: 1rem;
+.buttons>* {
+    margin: 0px 8px;
 }
 
-.box-content p {
-    color: #007185;
+.loginbtn {
+    background-color: white;
+    border-radius: 29px;
+    font-size: 15px;
+    padding: 11px;
+    font-weight: bolder;
+    width: 92px;
+    cursor: pointer;
 }
 
-footer{
-    margin-top: 15px;
+.loginbtn:hover {
+    font-size: 1rem;
+    background-color: rgb(208, 203, 203);
 }
-.foot-panel1{
-    background-color: #374758;
-    color: white;
-    height: 50px;
+
+.spotifyPlaylist h2 {
+    padding: 16px;
+}
+
+.playbar {
+    position: fixed;
+    width: 70vw;
+    bottom: 40px;
+    background-color: #dad5d5;
+    filter: invert(1);
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    min-height: 39px;
+}
+
+.songbuttons {}
+
+.songlist ul li {
+    list-style-type: decimal;
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 0px;
+    border: 1px solid white;
+    margin: 12px 0px;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.songlist ul {
+    padding: 0px 12px;
+    ;
+}
+
+.playnow {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-
 }
 
-.foot-panel2{
-    background-color: #222f3d;
-    color: white;
+
+.playnow span {
+    font-size: 12px;
+    width: 60px;
+}
+
+.songlist .info{
+    font-size: 13px;
+    width: 344px;
+}
+
+.songinfo{
+    width: 250px;
+}
+
+.info div{
+    word-break: break-all;
+}
+
+.songlist{
     height: 500px;
-   display: flex;
-   justify-content: space-evenly;
-}
-ul a {
-    display: block;
-    font-size: 0.85rem;
-    margin-top: 7px;
-    color: #dddddd;
-}
-ul p{
-    font-size: 1rem;
-    font-weight: 700;
-    margin-top: 45px;
+    overflow: auto;
+    margin-bottom: 44px;
 }
 
-.foot-panel3{
-    background-color: #222f3d;
-    color: white;
-    border-top: 0.5px solid white;
-    height: 70px;
-    display:flex;
+.seekbar{
+    height: 4px;
+    width: 98%;
+    background-color:black;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 10px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 5px;
+    left: 0%;
+    transition: left 0.5s;
+}
+
+.songbuttons img{
+    cursor: pointer;
+}
+
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0px;
+}
+.volume{
+    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 12px;
+    cursor: pointer;
 }
 
-.logo{
-    background-image: url("amazon_logo.png");
-    height: 50px;
-    background-size: cover;
-    width:100px;
+.range input{
+    cursor: pointer;
+}
+
+.songinfo{
+    color: black;
+    padding: 0 12px;
+    width: 250px;
+}
+.songinfo{
+
+}
+.songtime{
+    color: black;
+    padding: 0px 12px;
+    width: 125px;
+}
+.hamburger{
+    display: none;
+}
+.close{
+    display: none;
+}
+.vol_time{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media (max-width: 900px) {
+    .left{
+        position: absolute;
+        left: -120%;
+        transition: all 0.3s;
+        z-index: 1;
+        width: 370px;
+        background-color: black;
+        padding: 0;
+    }
+    .right{
+        width: 100vw;
+        margin: 0;
+    }
+
+    .playbar{
+        width: calc(100vw - 75px);
+        margin-left: 25px;
+    }
+    .hamburger{
+        display: inline;
+        cursor: pointer;
+    }
+    .close{
+        position: absolute;
+        right: 23px;
+        top: 25px;
+        width: 29px;
+        cursor: pointer;
+        display: block;
+    }
+    .seekbar{
+        width: calc(100vw - 100px);
+    }
+    .card{
+        width: 44vw;
+    }
+    .cardContainer{
+        margin: 0;
+        justify-content: center;
+    }
+
+    .abovebar{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .songinfo, .songtime{
+        width: auto;
+    }
+    .vol_time {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 13px;
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) {
+    .card {
+        width: 100%;
+    }
+    .header>* {
+        padding: 2px;
+    }
+    .buttons>* {
+        margin: 0 6px;
+    }
+    .header{
+        padding: 7px;
+    }
+    .spotifyplaylists h2 {
+        padding: 4px;
+    }
+    .library{
+        height: 85vh;
+    }
+    .left{ 
+        width: 100vw;
+    }
+    .playbar{
+        margin-left: 25px;
+    }
 }
